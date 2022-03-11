@@ -99,5 +99,13 @@ Ext.define('Practice.view.main.Main', {
         bind: {
             html: '{loremIpsum}'
         }
+    }, {
+    	title: 'Test Form Panel',
+    	iconCls: 'fa-edit',
+    	items: [
+    		{
+    			xtype: 'testform'
+    		}
+    	]
     }]
 });
