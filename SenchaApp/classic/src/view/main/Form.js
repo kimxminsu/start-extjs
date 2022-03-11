@@ -13,6 +13,8 @@ Ext.define('SenchaApp.view.main.Form', {
 		type: 'formviewmodel'
 	},
 	
+	controller: 'formcontroller',
+	
 	items : [
 		{
 			fieldLabel : 'Name',
@@ -38,6 +40,15 @@ Ext.define('SenchaApp.view.main.Form', {
 			emptyText: 'Select a phone...',
 		}
 	],
+	
+	buttons: [{
+		text: 'Register',
+		disabled: true,
+		formBind: true,
+		listeners: {
+			click: 'onItemSelected'
+		}
+	}],
 	
 	listeners: {
 		select: 'onItemSelected'
