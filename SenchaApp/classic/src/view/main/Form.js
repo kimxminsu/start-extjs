@@ -9,6 +9,10 @@ Ext.define('SenchaApp.view.main.Form', {
 	bodyPadding: 10,
 	defaultType: 'textfield',
 	
+	viewModel: {
+		type: 'formviewmodel'
+	},
+	
 	items : [
 		{
 			fieldLabel : 'Name',
@@ -20,6 +24,18 @@ Ext.define('SenchaApp.view.main.Form', {
 			xtype:'datefield',
 			fieldLabel : 'Date of birth',
 			name : 'date'
+		},{
+			xtype: 'combobox',
+			bind: {
+				store: '{getPhoneNumber}'
+			},
+			fieldLabel: 'Phone',
+			valueField: 'abbr',
+			name: 'phone',
+			displayFiled: 'phone',
+			typeAhead: true,
+			queryMode: 'local',
+			emptyText: 'Select a phone...',
 		}
 	],
 	
